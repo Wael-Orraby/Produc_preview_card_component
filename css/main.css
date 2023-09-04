@@ -1,0 +1,125 @@
+:root {
+  font-size: 100%;
+}
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+section {
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+section div:first-child {
+  background-image: url(../images/image-product-mobile.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  margin-bottom: 4rem;
+}
+section div:nth-child(2) {
+  padding: 2rem;
+}
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  position: relative;
+}
+h1::before {
+  content: "PERFUME";
+  position: absolute;
+  top: -2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 0.5rem;
+}
+section div:nth-child(2) p:nth-child(2) {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: hsl(228, 12%, 48%);
+}
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  color: hsl(158, 36%, 37%);
+  position: relative;
+}
+h2::after {
+  content: "$169.99";
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: hsl(228, 12%, 50%);
+  text-decoration: line-through;
+  position: absolute;
+  left: 11rem;
+  top: 0.7rem;
+}
+section div:nth-child(2) p:nth-child(4) {
+  text-align: center;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1.5rem;
+  color: white;
+  margin: 1.5rem 0 0;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+}
+section div:nth-child(2) p:nth-child(4):hover {
+  background-color: hsl(156, 42%, 18%);
+  cursor: pointer;
+}
+span {
+  position: relative;
+}
+span::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/icon-cart.svg);
+  background-size: cover;
+  position: absolute;
+  left: -1.8rem;
+}
+@media (min-width: 1440px) {
+  section {
+    flex-direction: row;
+    max-width: 48rem;
+  }
+  section div:first-child {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 0rem;
+    margin: 0;
+    height: 100%;
+  }
+  section div:nth-child(2) {
+    padding: 5rem 2rem 2rem;
+    width: 100%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
